@@ -92,7 +92,19 @@ layout: default
     </div>
   </div>
 
- 
+ <div class="publications">
+  {% assign filtered_entries = "" %}
+  {% for entry in site.bibliography %}
+    {% if entry.emails contains page.email %}
+      {% assign filtered_entries = filtered_entries | append: entry.key | append: "," %}
+    {% endif %}
+  {% endfor %}
+  {% if filtered_entries != "" %}
+    {% bibliography --query="key:{{ filtered_entries | split: ',' | join: ' OR key:' }}" %}
+  {% else %}
+    <p>No publications found for this email.</p>
+  {% endif %}
+</div>
 
 </div>
 
