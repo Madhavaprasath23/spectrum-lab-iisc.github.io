@@ -1,0 +1,242 @@
+---
+layout: default
+---
+
+<!-- Custom styles for album page -->
+<style>
+.album-photo {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.swiper-slide img {
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.02);
+}
+
+.event-section {
+  margin-bottom: 4rem;
+}
+
+.event-header {
+  border-bottom: 2px solid var(--global-theme-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.event-title {
+  color: var(--global-theme-color);
+  font-weight: 600;
+}
+
+.event-date {
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-description {
+  color: var(--global-text-color);
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.album-swiper {
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.album-swiper .swiper-pagination {
+  margin-top: 20px;
+  position: static;
+}
+
+.album-caption {
+  background: transparent;
+  color: var(--global-text-color);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.album-caption h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  color: var(--global-text-color);
+}
+
+/* Dark mode adjustments */
+html[data-theme="dark"] .album-swiper {
+  box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+}
+
+@media (max-width: 768px) {
+  .album-photo {
+    height: 300px;
+  }
+  
+  .album-caption h5 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .album-photo {
+    height: 250px;
+  }
+  
+  .album-caption h5 {
+    font-size: 0.9rem;
+  }
+}
+</style>
+
+<!-- Page content (from markdown) -->
+{{ content }}
+
+<!-- Album display -->
+<div class="album-container">
+  {% assign sorted_events = site.data.album | sort: "date" | reverse %}
+  
+  {% for event in sorted_events %}
+    <div class="event-section">
+      <div class="event-header">
+        <h2 class="event-title">{{ event.event }}</h2>
+        <div class="event-date">
+          <i class="fas fa-calendar-alt"></i> 
+          {{ event.date | date: "%B %d, %Y" }}
+        </div>
+        <p class="event-description">{{ event.description }}</p>
+      </div>
+      
+      {% if event.photos.size > 0 %}
+        {% assign sorted_photos = event.photos | sort: "order" %}
+        {% assign swiper_id = event.folder | slugify %}
+        
+        <!-- Swiper -->
+        <div class="swiper album-swiper" id="swiper-{{ swiper_id }}">
+          <div class="swiper-wrapper">
+            {% for photo in sorted_photos %}
+              <div class="swiper-slide d-flex justify-content-center align-items-center">
+                <img src="{{ photo.image | relative_url }}" 
+                     class="album-photo" 
+                     alt="{{ photo.caption }}"
+                     data-caption="{{ photo.caption }}"
+                     loading="lazy">
+              </div>
+            {% endfor %}
+          </div>
+          <!-- Pagination dots -->
+          <div class="swiper-pagination"></div>
+        </div>
+        
+        <!-- Caption below swiper -->
+        <div class="album-caption">
+          <h5 id="caption-{{ swiper_id }}">{{ sorted_photos.first.caption }}</h5>
+        </div>
+      {% else %}
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle"></i>
+          No photos available for this event yet.
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+  
+  {% if site.data.album.size == 0 %}
+    <div class="text-center py-5">
+      <div class="alert alert-secondary">
+        <i class="fas fa-camera"></i>
+        <h4>No events in the album yet</h4>
+        <p>Check back soon for photos from our upcoming events!</p>
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+<!-- Optional: Add modal for full-size image viewing -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageModalLabel">Photo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="modalImage" src="" class="img-fluid" alt="">
+        <p id="modalCaption" class="mt-2 text-muted"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Add click handlers for swiper image modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const albumPhotos = document.querySelectorAll('.album-photo');
+  const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+  const modalImage = document.getElementById('modalImage');
+  const modalCaption = document.getElementById('modalCaption');
+  
+  albumPhotos.forEach(function(photo) {
+    photo.addEventListener('click', function(e) {
+      // Prevent swiper from advancing when clicking on image
+      e.stopPropagation();
+      
+      modalImage.src = this.src;
+      modalImage.alt = this.alt;
+      
+      // Get caption from data attribute or alt text
+      const captionText = this.getAttribute('data-caption') || this.alt;
+      
+      modalCaption.textContent = captionText;
+      modal.show();
+    });
+  });
+  
+  // Initialize all album swipers
+  const albumSwipers = document.querySelectorAll('.album-swiper');
+  albumSwipers.forEach(function(swiperEl) {
+    const swiperId = swiperEl.id.replace('swiper-', '');
+    
+    const swiperInstance = new Swiper(swiperEl, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      speed: 800,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: swiperEl.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
+      navigation: {
+        nextEl: swiperEl.querySelector('.swiper-button-next'),
+        prevEl: swiperEl.querySelector('.swiper-button-prev'),
+      },
+      on: {
+        slideChange: function() {
+          const activeSlide = this.slides[this.activeIndex];
+          const activeImage = activeSlide.querySelector('img');
+          const caption = activeImage.getAttribute('data-caption');
+          const captionElement = document.getElementById('caption-' + swiperId);
+          
+          if (captionElement && caption) {
+            captionElement.textContent = caption;
+          }
+        }
+      }
+    });
+  });
+});
+</script>
