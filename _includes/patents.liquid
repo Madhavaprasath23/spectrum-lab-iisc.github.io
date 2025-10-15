@@ -1,0 +1,419 @@
+<div class="patents-portfolio">
+  <div class="container-fluid">
+    
+    <!-- Statistics Overview -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="stats-overview">
+          <div class="row text-center">
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="stat-card">
+                <i class="fas fa-certificate fa-2x text-primary mb-2"></i>
+                <h4 class="font-weight-bold">{{ site.data.patents.statistics.total_patents }}</h4>
+                <p class="text-muted">Total Patents</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="stat-card">
+                <i class="fas fa-award fa-2x text-success mb-2"></i>
+                <h4 class="font-weight-bold">{{ site.data.patents.statistics.granted_patents }}</h4>
+                <p class="text-muted">Granted Patents</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="stat-card">
+                <i class="fas fa-clock fa-2x text-warning mb-2"></i>
+                <h4 class="font-weight-bold">{{ site.data.patents.statistics.pending_patents }}</h4>
+                <p class="text-muted">Pending Patents</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="stat-card">
+                <i class="fas fa-globe fa-2x text-info mb-2"></i>
+                <h4 class="font-weight-bold">{{ site.data.patents.statistics.international_patents }}</h4>
+                <p class="text-muted">International Patents</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technology Categories -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="section-title mb-4">
+          <i class="fas fa-tags text-primary mr-2"></i>
+          Technology Categories
+        </h2>
+        <div class="row">
+          {% for category in site.data.patents.categories %}
+          <div class="col-md-4 col-lg-2 mb-3">
+            <div class="category-card text-center p-3 h-100">
+              <i class="{{ category.icon }} fa-2x text-primary mb-3"></i>
+              <h5 class="font-weight-bold">{{ category.name }}</h5>
+              <p class="small text-muted mb-2">{{ category.description }}</p>
+              <span class="badge badge-primary">{{ category.count }} patent{{ category.count | pluralize: '', 's' }}</span>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Patents -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="section-title mb-4">
+          <i class="fas fa-star text-primary mr-2"></i>
+          Recent Patents (2025)
+        </h2>
+        <div class="patents-grid">
+          {% for patent in site.data.patents.recent_patents %}
+          <div class="patent-card mb-4 p-4 border rounded shadow-sm border-success">
+            <div class="row">
+              <div class="col-md-8">
+                <h4 class="patent-title text-primary mb-2">{{ patent.title }}</h4>
+                <p class="patent-description mb-2">{{ patent.description }}</p>
+                <p class="inventors mb-2">
+                  <i class="fas fa-users text-muted mr-2"></i>
+                  <strong>Inventors:</strong> {{ patent.inventors | join: ", " }}
+                </p>
+                <div class="patent-meta mb-2">
+                  <span class="badge badge-success mr-2">{{ patent.category }}</span>
+                  <span class="badge badge-info">{{ patent.status }}</span>
+                </div>
+              </div>
+              <div class="col-md-4 text-right">
+                <div class="patent-details">
+                  <p class="patent-number mb-1">
+                    <strong>{{ patent.patent_number }}</strong>
+                  </p>
+                  <p class="patent-type text-muted mb-1">{{ patent.type }}</p>
+                  <p class="filing-date text-sm">Filed: {{ patent.filing_date }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Granted Patents -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="section-title mb-4">
+          <i class="fas fa-trophy text-primary mr-2"></i>
+          Granted Patents
+        </h2>
+        <div class="patents-grid">
+          {% for patent in site.data.patents.granted_patents %}
+          <div class="patent-card mb-4 p-4 border rounded shadow-sm bg-light border-warning">
+            <div class="row">
+              <div class="col-md-8">
+                <h4 class="patent-title text-primary mb-2">{{ patent.title }}</h4>
+                <p class="patent-description mb-2">{{ patent.description }}</p>
+                <p class="inventors mb-2">
+                  <i class="fas fa-users text-muted mr-2"></i>
+                  <strong>Inventors:</strong> {{ patent.inventors | join: ", " }}
+                </p>
+                <div class="patent-meta mb-2">
+                  <span class="badge badge-warning mr-2">{{ patent.category }}</span>
+                  <span class="badge badge-success">{{ patent.status }}</span>
+                </div>
+              </div>
+              <div class="col-md-4 text-right">
+                <div class="patent-details">
+                  <p class="patent-number mb-1">
+                    <strong>Patent No. {{ patent.patent_number }}</strong>
+                  </p>
+                  <p class="patent-type text-muted mb-1">{{ patent.type }}</p>
+                  <p class="grant-date text-sm">
+                    <i class="fas fa-check-circle text-success mr-1"></i>
+                    Granted: {{ patent.grant_date }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Pending Patents -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="section-title mb-4">
+          <i class="fas fa-hourglass-half text-primary mr-2"></i>
+          Pending Patents
+        </h2>
+        <div class="patents-grid">
+          {% for patent in site.data.patents.pending_patents %}
+          <div class="patent-card mb-4 p-4 border rounded shadow-sm {% if patent.status == 'Granted' %}bg-light border-success{% else %}border-primary{% endif %}">
+            <div class="row">
+              <div class="col-md-8">
+                <h4 class="patent-title text-primary mb-2">{{ patent.title }}</h4>
+                <p class="patent-description mb-2">{{ patent.description }}</p>
+                <p class="inventors mb-2">
+                  <i class="fas fa-users text-muted mr-2"></i>
+                  <strong>Inventors:</strong> {{ patent.inventors | join: ", " }}
+                </p>
+                {% if patent.scope %}
+                <p class="patent-scope mb-2">
+                  <i class="fas fa-globe text-info mr-2"></i>
+                  <strong>Scope:</strong> {{ patent.scope }}
+                </p>
+                {% endif %}
+                {% if patent.international_number %}
+                <p class="international-info mb-2">
+                  <i class="fas fa-flag text-warning mr-2"></i>
+                  <strong>International:</strong> {{ patent.international_number }} ({{ patent.international_filing_date }})
+                </p>
+                {% endif %}
+                {% if patent.note %}
+                <p class="patent-note mb-2">
+                  <i class="fas fa-info-circle text-info mr-2"></i>
+                  <em>{{ patent.note }}</em>
+                </p>
+                {% endif %}
+                <div class="patent-meta mb-2">
+                  <span class="badge badge-primary mr-2">{{ patent.category }}</span>
+                  <span class="badge {% if patent.status == 'Granted' %}badge-success{% else %}badge-secondary{% endif %}">{{ patent.status }}</span>
+                  {% if patent.international_number %}
+                  <span class="badge badge-info">International</span>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="col-md-4 text-right">
+                <div class="patent-details">
+                  <p class="patent-number mb-1">
+                    <strong>{{ patent.patent_number }}</strong>
+                  </p>
+                  <p class="patent-type text-muted mb-1">{{ patent.type }}</p>
+                  <p class="filing-date text-sm">Filed: {{ patent.filing_date }}</p>
+                  {% if patent.grant_date %}
+                  <p class="grant-date text-sm">
+                    <i class="fas fa-check-circle text-success mr-1"></i>
+                    Granted: {{ patent.grant_date }}
+                  </p>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Patent Timeline -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="section-title mb-4">
+          <i class="fas fa-timeline text-primary mr-2"></i>
+          Patent Filing Timeline
+        </h2>
+        <div class="timeline-container p-4 bg-light rounded">
+          <div class="patent-timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker bg-success"></div>
+              <div class="timeline-content">
+                <h5 class="timeline-year">2025</h5>
+                <p class="timeline-detail">2 new patent applications filed - Neuromorphic sensors and Medical AI</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker bg-warning"></div>
+              <div class="timeline-content">
+                <h5 class="timeline-year">2023</h5>
+                <p class="timeline-detail">Ultrasound imaging patent granted - Breakthrough in medical imaging</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker bg-info"></div>
+              <div class="timeline-content">
+                <h5 class="timeline-year">2018</h5>
+                <p class="timeline-detail">Audio coding patent granted - Innovation in signal processing</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker bg-primary"></div>
+              <div class="timeline-content">
+                <h5 class="timeline-year">2014-2018</h5>
+                <p class="timeline-detail">Multiple applications filed across speech processing, medical imaging, and signal processing domains</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+.patents-portfolio {
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-title {
+  border-bottom: 3px solid var(--global-theme-color);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.category-card {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-color: var(--global-theme-color);
+}
+
+.patent-card {
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--global-theme-color);
+}
+
+.patent-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.patent-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.patent-description {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.inventors {
+  font-size: 0.85rem;
+}
+
+.patent-number {
+  font-size: 1rem;
+  color: var(--global-theme-color);
+}
+
+.patent-note {
+  font-size: 0.85rem;
+  background: #e7f3ff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border-left: 3px solid #007bff;
+}
+
+.international-info {
+  font-size: 0.85rem;
+  background: #fff3cd;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border-left: 3px solid #ffc107;
+}
+
+.timeline-container {
+  border: 1px solid #e9ecef;
+}
+
+.patent-timeline {
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 30px;
+  bottom: -2rem;
+  width: 2px;
+  background: #dee2e6;
+}
+
+.timeline-marker {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  flex-grow: 1;
+}
+
+.timeline-year {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--global-theme-color);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-detail {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.badge {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .patent-card .col-md-4 {
+    text-align: left !important;
+    margin-top: 15px;
+  }
+  
+  .stat-card {
+    margin-bottom: 20px;
+  }
+  
+  .category-card {
+    margin-bottom: 15px;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .timeline-marker {
+    margin-bottom: 10px;
+  }
+}
+</style>

@@ -20,24 +20,26 @@ show: true
 biography_paragraphs:
   - "<div style='text-align: justify;'> Chandra Sekhar Seelamantula (Senior Member, IEEE) received the <strong>Bachelor of Engineering</strong> degree with <em>Prof. K. K. Nair Gold Medal</em> and <em>Best Thesis Award</em> from Osmania University in 1999 and the <strong>Ph.D.</strong> from IISc in 2005 with an IBM India Research Lab Fellowship.</div>"
   - "<div style='text-align: justify;'> From 2005–2006, he was a consultant at ESQUBE Communication Solutions. From 2006–2009, he was a Postdoctoral Fellow at the Biomedical Imaging Group, EPFL, Switzerland, focusing on tomography, splines, and sparse signal processing.</div>"
-  - "<div style='text-align: justify;'> Since 2009, he has been on the Faculty of Electrical Engineering Department, IISc, where he is now Professor and leads the R&D activities of <strong>Spectrum Lab</strong>. His research interests include signal processing, machine learning, Generative AI, computational imaging, and AI for Healthcare.</div>"
+  - "<div style='text-align: justify;'> Since 2009, he has been on the Faculty of Electrical Engineering Department, IISc, where he is now Professor and leads the R&D activities of <strong>Spectrum Lab</strong>. His research expertise lies in Computational Imaging, Generative AI, and Artificial Intelligence/Machine Learning with primary focus on Healthcare applications and emphasis on explainability and interpretability.</div>"
     
 # Academic and Editorial Roles (optional section)
 show_academic_roles: true
 academic_roles:
-  - "Chair, IEEE Signal Processing Society Bangalore Chapter (2017–2021)"
-  - "Senior Area Editor, IEEE Signal Processing Letters (2017–2021)"
-  - "Associate Editor, IEEE Transactions on Image Processing (2018–2022)"
-  - "Area Chair, ICASSP 2020; TC Member, IEEE Computational Imaging (2020–2023)"
+  - "Chair, GATE-JAM Office, IISc; Organizing Chair (GATE 2024) (2020–2024)"
+  - "Senior Area Editor, IEEE Transactions on Image Processing (2022 onward)"
+  - "Editorial Board Member, Nature Scientific Data (2024 onward)"
+  - "Elected to IEEE Bio-imaging and Signal Processing Technical Committee (June 2025)"
+  - "Elected to Steering Committee, IEEE International Symposium on Biomedical Imaging (ISBI) (June 2025)"
 
 # Awards (optional section)
 show_awards: true
 awards:
-  - "Prof. Priti Shankar Teaching Award, IISc"
-  - "Digital Health Prize, NBEC 2018"
-  - "Grand Challenges Exploration Award, Gates Foundation + BIRAC, 2020"
-  - "Qualcomm Innovation Fellowship (4x), 2019–2022"
-  - "Outstanding Editorial Board Member, IEEE Trans. on Image Processing, 2022"
+  - "Outstanding Editorial Board Member Award, IEEE Transactions on Image Processing, 2022"
+  - "Grand Challenges Exploration — India (Round 5) research award, Bill and Melinda Gates Foundation and BIRAC, 2020"
+  - "Qualcomm Innovation Fellowship awards — 9 awards since 2019, co-recipient with PhD students"
+  - "Digital Health Prize at the National Bio-Entrepreneurship Competition 2018, BIRAC and C-CAMP"
+  - "Top 10% Best Paper Award at IEEE International Conference on Image Processing 2014"
+  - "Prof. Priti Shankar Teaching Award, 2013, IISc"
 
 # Visiting Positions (optional section)
 show_visiting_positions: true

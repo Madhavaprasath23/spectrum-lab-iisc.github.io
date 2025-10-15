@@ -27,3 +27,23 @@
   url: https://www.iisc.ac.in
   name: "Indian Institute of Science"
   invert : false
+
+- logo: /assets/img/funders/gates-foundation.png
+  url: https://www.gatesfoundation.org
+  name: "Bill & Melinda Gates Foundation"
+  invert : false
+
+- logo: /assets/img/funders/birac.png
+  url: https://birac.nic.in/
+  name: "Biotechnology Industrial Research Assistance Council"
+  invert : false
+
+- logo: /assets/img/funders/boeing.png
+  url: https://www.boeing.com
+  name: "The Boeing Company"
+  invert : false
+
+- logo: /assets/img/funders/texas-instruments.png
+  url: https://www.ti.com
+  name: "Texas Instruments"
+  invert : false

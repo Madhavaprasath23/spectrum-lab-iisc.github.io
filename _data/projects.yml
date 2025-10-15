@@ -1,0 +1,206 @@
+recent_projects:
+  - title: "A million frames per second computational neuromorphic imager"
+    funding_agency: "Anusandhan National Research Foundation (ANRF)"
+    role: "Principal Investigator"
+    amount: "₹64.70 lakhs"
+    duration: "2025-2028"
+    sanction_date: "March 28, 2025"
+    collaborators: ["Prof. Prasanta Kumar Ghosh (EE, IISc)"]
+    status: "Ongoing"
+
+  - title: "Neuromorphic processing for radar"
+    funding_agency: "ISRO-IISc Space Technology Cell"
+    role: "Principal Investigator"
+    amount: "₹22.25 lakhs"
+    duration: "2025-2027"
+    sanction_date: "April 2025"
+    collaborators: ["Prof. Chetan Singh Thakur (ESE, IISc)", "Mr. Ayush Jha (ISRO, Ahmedabad)"]
+    status: "Ongoing"
+
+  - title: "Enhancing effectiveness and accessibility of ophthalmological image analysis through modern machine learning"
+    funding_agency: "Ministry of Education (SPARC program)"
+    role: "Principal Investigator"
+    amount: "₹74.04 lakhs"
+    duration: "2024-2027"
+    sanction_date: "May 2024"
+    collaborators: ["Prof. Gaurav Sharma (U. Rochester, USA)", "Prof. Thrasos Pappas (Northwestern U., USA)"]
+    status: "Ongoing"
+    type: "International Collaboration"
+
+major_projects:
+  - title: "Seismic source characterization using state-of-the-art signal processing and machine learning techniques"
+    funding_agency: "Ministry of Earth Sciences"
+    role: "Principal Investigator"
+    amount: "₹7 lakhs"
+    duration: "2023-2025"
+    sanction_date: "May 26, 2023"
+    collaborators: ["Prof. Surendra Nadh Somala (Civil Engineering, IIT Hyderabad)"]
+    status: "Ongoing"
+
+  - title: "A robust, non-convex optimization framework for analysis and synthesis sparse models"
+    funding_agency: "Science and Engineering Research Board — Core Research Grant"
+    role: "Principal Investigator"
+    amount: "₹23 lakhs"
+    duration: "2021-2024"
+    sanction_date: "March 31, 2021"
+    collaborators: ["Prof. Prasanta Kumar Ghosh (EE, IISc)"]
+    status: "Completed"
+
+  - title: "AI powered diagnostics for wireless capsule endoscopy"
+    funding_agency: "Bill & Melinda Gates Foundation & DBT-BIRAC"
+    role: "Principal Investigator"
+    amount: "₹2 lakhs"
+    duration: "2020-2022"
+    sanction_date: "October 2020"
+    status: "Completed"
+    type: "Grand Challenges Exploration — India (Round 5)"
+
+  - title: "Adaptive low-rank sparse decomposition"
+    funding_agency: "Science and Engineering Research Board scheme for Mathematical and Theoretical Sciences Research (SERB-MATRICS)"
+    role: "Principal Investigator"
+    amount: "₹6 lakhs"
+    duration: "2020-2023"
+    sanction_date: "February 10, 2020"
+    status: "Completed"
+
+  - title: "iCare — Artificial intelligence powered solutions for eyecare"
+    funding_agency: "Science and Engineering Research Board -- Teachers Associateship for Research Excellence (SERB-TARE)"
+    role: "Co-Principal Investigator"
+    amount: "₹18 lakhs"
+    duration: "2019-2022"
+    sanction_date: "November 19, 2019"
+    collaborators: ["Mr. Harish Kumar J.R. from Manipal Institute of Technology, Manipal; Also QIP PhD candidate in the lab"]
+    status: "Completed"
+
+imprint_projects:
+  - title: "A low-cost, portable, super-resolution ultrasound scanner"
+    funding_agency: "Ministry of Human Resource Development and Ministry of Health and Family Welfare"
+    role: "Principal Investigator"
+    amount: "₹82 lakhs"
+    duration: "2016-2020"
+    sanction_date: "November 29, 2016"
+    status: "Completed"
+    type: "IMPRINT Project"
+    note: "IMPRINT is a highly competitive funding program. About 2,500 proposals were received from all over India and about 10% were selected for funding. This proposal received full funding."
+
+  - title: "An automated and efficient glaucoma prescreening system"
+    funding_agency: "Ministry of Human Resource Development and Indian Council for Medical Research"
+    role: "Principal Investigator"
+    amount: "₹61 lakhs"
+    duration: "2017-2019"
+    sanction_date: "February 27, 2017"
+    collaborators: ["Dr. Yogish Kamath, Kasturba Medical College, Manipal, Karnataka"]
+    status: "Completed"
+    type: "IMPRINT Project"
+    note: "IMPRINT is a highly competitive funding program. This proposal also received full funding."
+
+industry_projects:
+  - title: "Centre for Excellence in AI for Eyecare"
+    funding_agency: "Carl Zeiss India Pvt. Ltd. (CSR Grant)"
+    role: "Principal Investigator"
+    amount: "₹150 lakhs"
+    duration: "2024-2027"
+    status: "Ongoing"
+    type: "Industry Collaboration"
+
+  - title: "A novel super-sparse-array-based super-resolution ultrasound imaging system"
+    funding_agency: "Semiconductor Research Corporation"
+    role: "Principal Investigator"
+    amount: "$27k USD"
+    duration: "2020-2023"
+    collaborators: ["Dr. Chetan Singh Thakur (ESE, IISc)", "Mr. Shabbir Amjhera Wala (Texas Instruments, Bangalore)"]
+    status: "Completed"
+    type: "Industry Partnership"
+    note: "Texas Instruments Bangalore is industry partner"
+
+historical_projects:
+  - title: "Development of a high-speed neuromorphic imaging system"
+    funding_agency: "Institute of Eminence (IoE) funding of the Indian Institute of Science"
+    role: "Principal Investigator"
+    amount: "₹155 lakhs"
+    duration: "2019-2021"
+    sanction_date: "August 22, 2019"
+    collaborators: ["Prasanta Ghosh (EE)", "Kunal Chaudhury (EE)", "Muthuvel Arigovindan (EE)", "Soma Biswas (EE)", "Rajiv Soundararajan (ECE)", "Chetan Thakur (DESE)", "R. V. Babu (CDS)", "Ramsharan Rangarajan (ME)", "Aloke Kumar (ME)", "Deepak Nair (CNS)", "Sundarrajan Asokan (IAP)", "Gopalkrishna Hegde (CeNSE) all from IISc"]
+    status: "Completed"
+
+  - title: "In pursuit of a neuromorphic sampling theory"
+    funding_agency: "Pratiksha Trust Initiative"
+    role: "Co-Principal Investigator"
+    amount: "₹10 lakhs"
+    duration: "2019-2020"
+    sanction_date: "March 23, 2019"
+    collaborators: ["Dr. Chetan Singh Thakur (DESE, IISc)"]
+    status: "Completed"
+
+  - title: "Three-dimensional reconstruction using a neuromorphic event-based camera"
+    funding_agency: "Pratiksha Trust Initiative"
+    role: "Principal Investigator"
+    amount: "₹5 lakhs"
+    duration: "2018-2019"
+    sanction_date: "July 27, 2018"
+    collaborators: ["Dr. Chetan Singh Thakur (DESE, IISc)"]
+    status: "Completed"
+
+  - title: "Sub-Nyquist sampling — Challenges, fundamental limits, algorithms and applications"
+    funding_agency: "Science and Engineering Research Board"
+    role: "Principal Investigator"
+    amount: "₹34 lakhs"
+    duration: "2016-2018"
+    sanction_date: "September 30, 2016"
+    status: "Completed"
+
+consulting_projects:
+  - title: "Anomaly detection inside aircraft fuel tanks"
+    funding_agency: "The Boeing Company"
+    role: "Co-Principal Investigator"
+    amount: "$20k USD"
+    duration: "July-December 2024"
+    collaborators: ["Prof. R. Venkatesh Babu (CDS, IISc)", "Prof. Suresh Sundaram (AE, IISc)"]
+    status: "Completed"
+    type: "Consulting"
+
+  - title: "Development of monolithic and specialized neural network architecture for optical coherence tomography (OCT) image classification and design of an explainable artificial intelligence (AI) system through indicative visualization"
+    funding_agency: "Carl Zeiss Bangalore Private Limited"
+    role: "Principal Investigator"
+    amount: "₹38 lakhs"
+    duration: "June 2021-June 2023"
+    status: "Completed"
+    type: "Consulting"
+
+  - title: "Detection and quantification of surface irregularities and foreign debris using advanced artificial intelligence (AI) approach"
+    funding_agency: "The Boeing Company"
+    role: "Co-Principal Investigator"
+    amount: "$30k USD"
+    duration: "June 2022-June 2023"
+    collaborators: ["Prof. R. Venkatesh Babu (CDS, IISc)"]
+    status: "Completed"
+    type: "Consulting"
+
+international_collaborations:
+  - title: "Use of seismic microtremors in engineering seismology: Approaches used in Mexico and India to reduce the seismic risk"
+    funding_agency: "Indo-Mexico Joint Research Programme, Ministry of Science and Technology, International Bilateral Cooperation Division"
+    role: "Co-Principal Investigator"
+    amount: "₹19 lakhs"
+    duration: "2017-2020"
+    sanction_date: "March 7, 2017"
+    collaborators: ["Prof. Kusala Rajendran (Centre for Earth Sciences, IISc)", "Prof. Francisco Jose Chavez Garcia, U. National Autonoma de Mexico (UNAM), Mexico City"]
+    status: "Completed"
+    type: "International Collaboration"
+
+  - title: "PRAIMA — Phase retrieval for advanced imaging applications"
+    funding_agency: "Indo-Austria Joint Research Personnel Exchange Programme"
+    role: "Co-Principal Investigator"
+    amount: "₹6 lakhs"
+    duration: "2018-2021"
+    sanction_date: "June 11, 2019"
+    collaborators: ["Dr. Bettina Heise, Johannes Kepler University, Linz, Austria, and RECENDT, Linz, Austria"]
+    status: "Completed"
+    type: "International Collaboration"
+
+statistics:
+  total_funding: "₹1000+ lakhs + $77k USD"
+  active_projects: 4
+  completed_projects: 20+
+  industry_partnerships: 5
+  international_collaborations: 3
+  imprint_projects: 2

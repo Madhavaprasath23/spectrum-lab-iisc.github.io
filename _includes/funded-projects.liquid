@@ -1,0 +1,431 @@
+<div class="funded-projects">
+  <div class="container-fluid">
+    
+    <!-- Statistics Overview -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="stats-overview">
+          <div class="row text-center">
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="stat-card">
+                <i class="fas fa-rupee-sign fa-2x text-primary mb-2"></i>
+                <h4 class="font-weight-bold">{{ site.data.projects.statistics.total_funding }}</h4>
+                <p class="text-muted">Total Funding</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="stat-card">
+                <i class="fas fa-play-circle fa-2x text-success mb-2"></i>
+                <h4 class="font-weight-bold">{{ site.data.projects.statistics.active_projects }}</h4>
+                <p class="text-muted">Active Projects</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="stat-card">
+                <i class="fas fa-check-circle fa-2x text-info mb-2"></i>
+                <h4 class="font-weight-bold">{{ site.data.projects.statistics.completed_projects }}</h4>
+                <p class="text-muted">Completed Projects</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+              <div class="stat-card">
+                <i class="fas fa-globe fa-2x text-warning mb-2"></i>
+                <h4 class="font-weight-bold">{{ site.data.projects.statistics.international_collaborations }}</h4>
+                <p class="text-muted">International Collaborations</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent & Active Projects -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="section-title mb-4">
+          <i class="fas fa-rocket text-primary mr-2"></i>
+          Recent & Active Projects
+        </h2>
+        <div class="projects-grid">
+          {% for project in site.data.projects.recent_projects %}
+          <div class="project-card mb-4 p-4 border rounded shadow-sm">
+            <div class="row">
+              <div class="col-md-8">
+                <h4 class="project-title text-primary mb-2">{{ project.title }}</h4>
+                <p class="funding-agency mb-2">
+                  <i class="fas fa-university text-muted mr-2"></i>
+                  <strong>{{ project.funding_agency }}</strong>
+                </p>
+                {% if project.collaborators %}
+                <p class="collaborators mb-2">
+                  <i class="fas fa-users text-muted mr-2"></i>
+                  <strong>Collaborators:</strong> {{ project.collaborators | join: ", " }}
+                </p>
+                {% endif %}
+                {% if project.type %}
+                <span class="badge badge-info mr-2">{{ project.type }}</span>
+                {% endif %}
+                <span class="badge {% if project.status == 'Ongoing' %}badge-success{% else %}badge-secondary{% endif %}">{{ project.status }}</span>
+              </div>
+              <div class="col-md-4 text-right">
+                <div class="project-details">
+                  <h5 class="amount text-success mb-1">{{ project.amount }}</h5>
+                  <p class="duration text-muted mb-1">{{ project.duration }}</p>
+                  <p class="role text-sm"><strong>{{ project.role }}</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Major Government Projects -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="section-title mb-4">
+          <i class="fas fa-landmark text-primary mr-2"></i>
+          Major Government Projects
+        </h2>
+        <div class="projects-grid">
+          {% for project in site.data.projects.major_projects %}
+          <div class="project-card mb-4 p-4 border rounded shadow-sm">
+            <div class="row">
+              <div class="col-md-8">
+                <h4 class="project-title text-primary mb-2">{{ project.title }}</h4>
+                <p class="funding-agency mb-2">
+                  <i class="fas fa-university text-muted mr-2"></i>
+                  <strong>{{ project.funding_agency }}</strong>
+                </p>
+                {% if project.collaborators %}
+                <p class="collaborators mb-2">
+                  <i class="fas fa-users text-muted mr-2"></i>
+                  <strong>Collaborators:</strong> {{ project.collaborators | join: ", " }}
+                </p>
+                {% endif %}
+                {% if project.type %}
+                <span class="badge badge-info mr-2">{{ project.type }}</span>
+                {% endif %}
+                <span class="badge {% if project.status == 'Ongoing' %}badge-success{% else %}badge-secondary{% endif %}">{{ project.status }}</span>
+              </div>
+              <div class="col-md-4 text-right">
+                <div class="project-details">
+                  <h5 class="amount text-success mb-1">{{ project.amount }}</h5>
+                  <p class="duration text-muted mb-1">{{ project.duration }}</p>
+                  <p class="role text-sm"><strong>{{ project.role }}</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- IMPRINT Projects -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="section-title mb-4">
+          <i class="fas fa-medal text-primary mr-2"></i>
+          IMPRINT Projects
+          <small class="text-muted">(Highly Competitive - 10% Selection Rate)</small>
+        </h2>
+        <div class="projects-grid">
+          {% for project in site.data.projects.imprint_projects %}
+          <div class="project-card mb-4 p-4 border rounded shadow-sm bg-light">
+            <div class="row">
+              <div class="col-md-8">
+                <h4 class="project-title text-primary mb-2">{{ project.title }}</h4>
+                <p class="funding-agency mb-2">
+                  <i class="fas fa-university text-muted mr-2"></i>
+                  <strong>{{ project.funding_agency }}</strong>
+                </p>
+                {% if project.collaborators %}
+                <p class="collaborators mb-2">
+                  <i class="fas fa-users text-muted mr-2"></i>
+                  <strong>Collaborators:</strong> {{ project.collaborators | join: ", " }}
+                </p>
+                {% endif %}
+                {% if project.note %}
+                <p class="project-note mb-2">
+                  <i class="fas fa-info-circle text-info mr-2"></i>
+                  <em>{{ project.note }}</em>
+                </p>
+                {% endif %}
+                <span class="badge badge-warning mr-2">{{ project.type }}</span>
+                <span class="badge badge-secondary">{{ project.status }}</span>
+              </div>
+              <div class="col-md-4 text-right">
+                <div class="project-details">
+                  <h5 class="amount text-success mb-1">{{ project.amount }}</h5>
+                  <p class="duration text-muted mb-1">{{ project.duration }}</p>
+                  <p class="role text-sm"><strong>{{ project.role }}</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Industry Collaborations -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="section-title mb-4">
+          <i class="fas fa-handshake text-primary mr-2"></i>
+          Industry Collaborations
+        </h2>
+        <div class="projects-grid">
+          {% for project in site.data.projects.industry_projects %}
+          <div class="project-card mb-4 p-4 border rounded shadow-sm border-primary">
+            <div class="row">
+              <div class="col-md-8">
+                <h4 class="project-title text-primary mb-2">{{ project.title }}</h4>
+                <p class="funding-agency mb-2">
+                  <i class="fas fa-building text-muted mr-2"></i>
+                  <strong>{{ project.funding_agency }}</strong>
+                </p>
+                {% if project.collaborators %}
+                <p class="collaborators mb-2">
+                  <i class="fas fa-users text-muted mr-2"></i>
+                  <strong>Collaborators:</strong> {{ project.collaborators | join: ", " }}
+                </p>
+                {% endif %}
+                {% if project.note %}
+                <p class="project-note mb-2">
+                  <i class="fas fa-info-circle text-info mr-2"></i>
+                  <em>{{ project.note }}</em>
+                </p>
+                {% endif %}
+                <span class="badge badge-primary mr-2">{{ project.type }}</span>
+                <span class="badge {% if project.status == 'Ongoing' %}badge-success{% else %}badge-secondary{% endif %}">{{ project.status }}</span>
+              </div>
+              <div class="col-md-4 text-right">
+                <div class="project-details">
+                  <h5 class="amount text-success mb-1">{{ project.amount }}</h5>
+                  <p class="duration text-muted mb-1">{{ project.duration }}</p>
+                  <p class="role text-sm"><strong>{{ project.role }}</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Consulting Projects -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="section-title mb-4">
+          <i class="fas fa-briefcase text-primary mr-2"></i>
+          Consulting Projects
+        </h2>
+        <div class="projects-grid">
+          {% for project in site.data.projects.consulting_projects %}
+          <div class="project-card mb-4 p-4 border rounded shadow-sm">
+            <div class="row">
+              <div class="col-md-8">
+                <h4 class="project-title text-primary mb-2">{{ project.title }}</h4>
+                <p class="funding-agency mb-2">
+                  <i class="fas fa-building text-muted mr-2"></i>
+                  <strong>{{ project.funding_agency }}</strong>
+                </p>
+                {% if project.collaborators %}
+                <p class="collaborators mb-2">
+                  <i class="fas fa-users text-muted mr-2"></i>
+                  <strong>Collaborators:</strong> {{ project.collaborators | join: ", " }}
+                </p>
+                {% endif %}
+                <span class="badge badge-info mr-2">{{ project.type }}</span>
+                <span class="badge badge-secondary">{{ project.status }}</span>
+              </div>
+              <div class="col-md-4 text-right">
+                <div class="project-details">
+                  <h5 class="amount text-success mb-1">{{ project.amount }}</h5>
+                  <p class="duration text-muted mb-1">{{ project.duration }}</p>
+                  <p class="role text-sm"><strong>{{ project.role }}</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- International Collaborations -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="section-title mb-4">
+          <i class="fas fa-globe-americas text-primary mr-2"></i>
+          International Collaborations
+        </h2>
+        <div class="projects-grid">
+          {% for project in site.data.projects.international_collaborations %}
+          <div class="project-card mb-4 p-4 border rounded shadow-sm border-warning">
+            <div class="row">
+              <div class="col-md-8">
+                <h4 class="project-title text-primary mb-2">{{ project.title }}</h4>
+                <p class="funding-agency mb-2">
+                  <i class="fas fa-flag text-muted mr-2"></i>
+                  <strong>{{ project.funding_agency }}</strong>
+                </p>
+                {% if project.collaborators %}
+                <p class="collaborators mb-2">
+                  <i class="fas fa-users text-muted mr-2"></i>
+                  <strong>Collaborators:</strong> {{ project.collaborators | join: ", " }}
+                </p>
+                {% endif %}
+                <span class="badge badge-warning mr-2">{{ project.type }}</span>
+                <span class="badge badge-secondary">{{ project.status }}</span>
+              </div>
+              <div class="col-md-4 text-right">
+                <div class="project-details">
+                  <h5 class="amount text-success mb-1">{{ project.amount }}</h5>
+                  <p class="duration text-muted mb-1">{{ project.duration }}</p>
+                  <p class="role text-sm"><strong>{{ project.role }}</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Historical Projects (Collapsible) -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="section-title mb-4">
+          <i class="fas fa-history text-primary mr-2"></i>
+          Selected Historical Projects
+        </h2>
+        <div class="accordion" id="historicalProjects">
+          <div class="card">
+            <div class="card-header" id="historicalHeader">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#historicalCollapse" aria-expanded="false" aria-controls="historicalCollapse">
+                  <i class="fas fa-chevron-down mr-2"></i>
+                  View Historical Projects ({{ site.data.projects.historical_projects.size }} projects)
+                </button>
+              </h5>
+            </div>
+            <div id="historicalCollapse" class="collapse" aria-labelledby="historicalHeader" data-parent="#historicalProjects">
+              <div class="card-body">
+                <div class="projects-grid">
+                  {% for project in site.data.projects.historical_projects %}
+                  <div class="project-card mb-3 p-3 border rounded">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <h5 class="project-title text-primary mb-2">{{ project.title }}</h5>
+                        <p class="funding-agency mb-1">
+                          <i class="fas fa-university text-muted mr-2"></i>
+                          <strong>{{ project.funding_agency }}</strong>
+                        </p>
+                        {% if project.collaborators %}
+                        <p class="collaborators mb-2 text-sm">
+                          <i class="fas fa-users text-muted mr-2"></i>
+                          <strong>Collaborators:</strong> {{ project.collaborators | join: ", " }}
+                        </p>
+                        {% endif %}
+                        <span class="badge badge-secondary">{{ project.status }}</span>
+                      </div>
+                      <div class="col-md-4 text-right">
+                        <div class="project-details">
+                          <h6 class="amount text-success mb-1">{{ project.amount }}</h6>
+                          <p class="duration text-muted mb-1 text-sm">{{ project.duration }}</p>
+                          <p class="role text-sm"><strong>{{ project.role }}</strong></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<style>
+.funded-projects {
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-title {
+  border-bottom: 3px solid var(--global-theme-color);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.project-card {
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--global-theme-color);
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.amount {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.funding-agency {
+  font-size: 0.95rem;
+}
+
+.collaborators {
+  font-size: 0.85rem;
+}
+
+.project-note {
+  font-size: 0.85rem;
+  background: #e7f3ff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border-left: 3px solid #007bff;
+}
+
+.badge {
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .project-card .col-md-4 {
+    text-align: left !important;
+    margin-top: 15px;
+  }
+  
+  .stat-card {
+    margin-bottom: 20px;
+  }
+}
+</style>

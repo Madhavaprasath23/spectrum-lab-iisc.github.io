@@ -1,0 +1,117 @@
+recent_patents:
+  - title: "A method for unlimited sampling using neuromorphic sensors"
+    inventors: ["S. Anand", "S. Kulur", "A. J. Kamath", "S. Yadav", "C. S. Thakur", "C. S. Seelamantula"]
+    patent_number: "202441018543"
+    type: "Indian Patent Application"
+    filing_date: "March 11, 2025"
+    status: "Filed"
+    category: "Neuromorphic Computing"
+    description: "Novel approach for unlimited dynamic range sampling using neuromorphic event-based sensors"
+
+  - title: "A method of classifying abnormalities in endoscopic data and a system thereof"
+    inventors: ["C. S. Seelamantula", "S. Paul", "D. R. Megalmani", "A. Dhupia", "S. K. S. Mantrala"]
+    patent_number: "202541044663"
+    type: "Indian Patent Application"
+    filing_date: "May 8, 2025"
+    status: "Filed"
+    category: "Medical AI"
+    description: "AI-based system for automated classification of abnormalities in endoscopic imaging data"
+
+granted_patents:
+  - title: "A suite of novel audio coding algorithms"
+    inventors: ["C. S. Seelamantula", "T. V. Sreenivas"]
+    patent_number: "298255"
+    type: "Indian Patent"
+    filing_date: "Earlier"
+    grant_date: "June 29, 2018"
+    status: "Granted"
+    category: "Audio Processing"
+    description: "Comprehensive suite of innovative algorithms for efficient audio coding and compression"
+
+pending_patents:
+  - title: "System and method for providing and designing unlimited dynamic range analogue-to-digital conversion"
+    inventors: ["C. S. Thakur", "C. S. Seelamantula", "A. Krishna", "S. Rudresh", "V. Shaw", "H. R. Sabbella"]
+    patent_number: "201841044116"
+    type: "Indian Patent Application"
+    filing_date: "November 22, 2018"
+    status: "Filed - Response to FER filed on May 25, 2023"
+    category: "Signal Processing"
+    description: "Advanced system for unlimited dynamic range analog-to-digital conversion with novel design methodologies"
+    note: "Response to First Examination Report filed"
+
+  - title: "Automated fundus image processing techniques for glaucoma prescreening"
+    inventors: ["C. S. Seelamantula", "Harish Kumar J. R."]
+    patent_number: "TEMP/E1/18223/2017CHE"
+    type: "Indian Patent Application"
+    filing_date: "May 23, 2017"
+    international_number: "PCT/IB2018/053030"
+    international_filing_date: "May 2, 2018"
+    status: "Filed (Indian & International)"
+    category: "Medical Imaging"
+    description: "Automated image processing techniques for early detection and prescreening of glaucoma from fundus images"
+    scope: "National and International"
+
+  - title: "Low-rate super-resolution ultrasound imaging system"
+    inventors: ["C. S. Seelamantula", "S. Nagesh", "S. Mulleti", "S. Rudresh", "D. Mazumder", "R. M. Vasu"]
+    patent_number: "6178/CHE/2015"
+    type: "Indian Patent Application"
+    filing_date: "November 17, 2015"
+    grant_date: "February 28, 2023"
+    status: "Granted"
+    category: "Medical Imaging"
+    description: "Innovative system for achieving super-resolution in ultrasound imaging using low sampling rates"
+
+  - title: "Method and system for epoch based modification of speech signals"
+    inventors: ["C. S. Seelamantula", "S. Rudresh", "A. Vasisht"]
+    patent_number: "4276/CHE/2014"
+    type: "Indian Patent Application"
+    filing_date: "September 2, 2014"
+    international_number: "PCT/IB2015/056661"
+    international_filing_date: "September 2, 2015"
+    status: "Filed - Response to FER filed in June 2019"
+    category: "Speech Processing"
+    description: "Novel method for epoch-based modification and enhancement of speech signals"
+    scope: "National and PCT"
+
+  - title: "System and method for estimating spectro-temporal envelope and harmonics of a speech signal"
+    inventors: ["C. S. Seelamantula", "H. Aragonda"]
+    patent_number: "5424/CHE/2014"
+    type: "Indian Patent Application"
+    filing_date: "November 5, 2014"
+    status: "Filed - Response to FER filed in February 2019"
+    category: "Speech Processing"
+    description: "Advanced system for analyzing and estimating spectro-temporal characteristics of speech signals"
+
+categories:
+  - name: "Neuromorphic Computing"
+    count: 2
+    description: "Patents related to neuromorphic sensors and unlimited sampling"
+    icon: "fas fa-brain"
+    
+  - name: "Medical AI"
+    count: 3
+    description: "AI-based solutions for medical imaging and diagnostics"
+    icon: "fas fa-user-md"
+    
+  - name: "Signal Processing"
+    count: 2
+    description: "Advanced signal processing algorithms and systems"
+    icon: "fas fa-wave-square"
+    
+  - name: "Speech Processing"
+    count: 2
+    description: "Speech analysis, modification, and enhancement techniques"
+    icon: "fas fa-microphone"
+    
+  - name: "Audio Processing"
+    count: 1
+    description: "Audio coding and compression algorithms"
+    icon: "fas fa-music"
+
+statistics:
+  total_patents: 8
+  granted_patents: 2
+  pending_patents: 6
+  international_patents: 2
+  categories: 5
+  technology_areas: "Neuromorphic Computing, Medical AI, Signal Processing, Speech Processing, Audio Processing"
